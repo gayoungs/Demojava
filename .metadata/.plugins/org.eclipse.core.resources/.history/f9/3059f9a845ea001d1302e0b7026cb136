@@ -1,0 +1,22 @@
+package day16.api.io.budffered;
+
+import java.io.*;
+
+public class BufferedWriterEx2 {
+	
+	public static void main(String[] args) {
+		
+		/*
+		 * flush()
+		 */
+		
+		String path = "C:\\Users\\user\\Desktop\\course\\java\\file\\test2.txt";
+		
+		try( BufferedWriter bw = new BufferedWriter( new FileWriter(path) ) ) {
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

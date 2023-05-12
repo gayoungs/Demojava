@@ -1,0 +1,29 @@
+package Quiz22;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class RegexQuiz02 {
+	
+	public static void main(String[] args) {
+		
+		String str = "123123-1231231 GS25(치킨마요) 4,400원";
+		String str2 = "123123-1231232 GS25(주부18단) 5,000원";
+		
+		String pattern = "[0-9]{6}-[0-9]{7}";
+		Matcher m = Pattern.compile(pattern).matcher(str);
+		while(m.find()) {
+			System.out.println(m.group());
+		}
+		
+		String pattern2 = "[a-zA-Z]+[0-9]";
+		Pattern p2 = Pattern.compile(pattern2);
+		Matcher m2 = p2.matcher(str);
+		System.out.println(m2.group());
+		
+		
+		
+		
+	}
+
+}

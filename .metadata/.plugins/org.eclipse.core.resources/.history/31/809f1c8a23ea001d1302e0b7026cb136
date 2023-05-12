@@ -1,0 +1,23 @@
+package day14.api.io.output;
+
+import java.io.FileInputStream;
+import java.io.FileOnputStream;
+
+public class FileCopyEx {
+	
+	public static void main(String[] args) {
+		
+		/*
+		 * FileInputStream, FileOutputStream은
+		 * 동영상, 이미지 파일을 읽거나 쓸때 사용합니다.
+		 */
+		
+		String readPath ="";
+		String writePath = "";
+			
+		
+		InputStream is = new FileInputStream(null);
+		OutputStream out = new FileOutputStream(null);
+	}
+
+}

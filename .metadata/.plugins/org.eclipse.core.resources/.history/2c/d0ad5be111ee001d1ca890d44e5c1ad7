@@ -1,0 +1,59 @@
+package Quiz21;
+
+import java.io.*;
+import java.util.List;
+
+public class MainClass {
+	
+	public static void main(String[] args) {
+		
+		
+		//지역명, 규모구분, 연도, 월, 분양가격 -> 1행 X 4800개
+		/*
+		 * 1. 버퍼리더 이용해서 한줄씩 읽습니다.
+		 * 2. split(",", 5)를 사용해서 Data객체에 한줄 단위로 저장을하고
+		 * 3. List<Data>에 하나씩 추가를 합니다.
+		 * 
+		 * 4. 람다식을 이용해서 지역:서울, 4분기중 9~12월, 분양가격: 2000이상인 객체만 뽑아서
+		 * 새로운 리스트로 반환.
+		 */
+
+		
+		String file = "data.csv"; // 데이터 파일 경로
+        List<Data> dataList = new ArrayList<>(); // 데이터를 저장할 리스트 생성
+       
+        
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] arr = line.split(",", 5); // 쉼표를 기준으로 데이터를 나누기
+                dataList.add(new Data(arr[0], arr[1], arr[2], arr[3], arr[4])); // 데이터 리스트에 추가
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // 람다식을 사용하여 지역이 서울이고 4분기 중 9~12월이며 분양가격이 2000 이상인 객체만을 새로운 리스트로 반환
+        List<Data> filteredList = dataList.stream()
+                .filter(d -> d.getRegion().equals("서울") && d.getMonth().matches(".*[9-1][0-2].*") && d.getPrice() >= 2000)
+                .toList();
+
+        // 결과 출력
+        for (Data data : filteredList) {
+            System.out.println(data);
+        }
+    }
+}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

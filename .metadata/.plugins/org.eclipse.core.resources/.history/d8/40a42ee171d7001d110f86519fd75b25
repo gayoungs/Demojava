@@ -1,0 +1,14 @@
+package quiz01;
+
+public class Quiz03 {
+	
+	public static void main(String[] args) {
+		
+		//키는 140이상, 나이는 8세 이상인 경우만 "놀이기구 탑승가능"
+		
+		Scanner scan = new Scanner(System.in);
+		
+				
+	}
+
+}

@@ -1,0 +1,32 @@
+package day16.api.io.budffered;
+
+import java.io.*;
+import java.util.Scanner;
+
+public class BufferedWriterEx2 {
+	
+	public static void main(String[] args) {
+		
+		/*
+		 * flush()
+		 */
+		
+		Scanner scan = new Scanner(System.in);
+		
+		String path = "C:\\Users\\user\\Desktop\\course\\java\\file\\test2.txt";
+		
+		try( BufferedWriter bw = new BufferedWriter( new FileWriter(path) ) ) {
+			
+		System.out.print(">");
+		String word1 = scan.next();
+		System.out.print(">");
+		String word2 = scan.next();
+		
+		System.out.println("파일출력 완료");
+		
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

@@ -1,0 +1,14 @@
+package Study1;
+
+public class QrCode {
+	
+	 public int solution(String numbers) {
+		
+		 
+		 
+		String str = numbers.replaceFirst("zero", 1).replace()
+		 
+		 
+	}
+
+}

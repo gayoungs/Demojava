@@ -1,0 +1,38 @@
+package quiz01;
+
+import java.util.Scanner;
+
+public class Quiz03 {
+	
+	public static void main(String[] args) {
+		
+		int a;
+		int b;
+		
+	   Scanner scan = new Scanner(System.in);
+		
+	   a = scan.nextInt();
+	   
+	   if (a % 100 == 0) {
+		   b = 1;
+	   }
+	   else { b = 0;
+			   
+	   }
+	   System.out.println(b);
+	 
+	
+     if (a % 400 == 0) {
+    	 a = 0 ;
+     }
+	   else { a = 1;
+			   
+	   } 
+     System.out.print(a);
+	}
+    	 
+     
+    
+	}
+
+}
